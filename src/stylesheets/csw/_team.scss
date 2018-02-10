@@ -88,6 +88,15 @@
   }
 
   @include lg {
-    
+    &__copy {
+      padding-left: $g-spacer-lg;
+      padding-right: $g-spacer;
+    }
+
+    &__item:nth-child(even) {
+      .Team-list__copy {
+        padding-right: $g-spacer-xxl;
+      }
+    }
   }
 }
