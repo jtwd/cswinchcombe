@@ -23,7 +23,7 @@ $base-input-highlight-color: $base-text-color !default;
 $body-antialiased: $g-body-antialiased !default;
 $body-no-horizontal-scroll: $g-body-no-horizontal-scroll !default;
 
-$fixed-header-bp: 336px;
+$fixed-header-bp: 370px;
 $fixed-header-size-xxs: 89px;
 $fixed-header-size-xs: 97px;
 $fixed-header-size-md: 98px;
@@ -163,7 +163,16 @@ textarea::selection {
     }
   }
 
-  .copy-wrapper {
-    max-width: 38rem;
+  @include md {
+    .copy-wrapper {
+      column-count: 2;
+      column-gap: $g-spacer;
+    }
+  }
+
+  @include lg {
+    .copy-wrapper {
+      column-gap: $g-spacer-lg;
+    }
   }
 }

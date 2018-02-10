@@ -5,21 +5,46 @@
   font-weight: 400;
   text-shadow: 1px 1px 2px rgba($c-dark, .9);
   line-height: 1.2;
-  box-shadow: inset 0 -5px 5px 0 rgba($c-dark, .2), 
-              inset 0 5px 5px 0 rgba($c-dark, .2);
+  display: inline-block;
 
   a {
     text-decoration: none;
-    display: block;
+    display: inline-block;
     padding: $g-spacer-sm $g-spacer;
     color: #fffdda;
     transition: $hover-trans;
+    position: relative;
+    padding-left: 50px;
 
     &:hover,
     &:focus {
       color: $c-light;
       text-shadow: 2px 2px 4px rgba(#000, .9);
       background: rgba($c-dark, .2);
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background: url(../images/tree.png) no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      left: 10px;
+      top: 45%;
+      transform: translateY(-50%);
+    }
+
+    @include xxs {
+      padding-left: 65px;
+
+      &:before {
+        width: 40px;
+        height: 40px;
+        top: 47.5%;
+        left: 12px;
+      }
     }
   }
 
@@ -33,9 +58,17 @@
 
   @include mq($from: $fixed-header-bp) {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 
     a {
-      padding: 1rem 0;
+      padding: $g-spacer 0 $g-spacer 45px;
+
+      &:before {
+        width: 35px;
+        height: 35px;
+        left: 0;
+      }
     }
   }
 
@@ -48,25 +81,43 @@
     text-align: left;
 
     a {
-      padding-left: $g-spacer;
+      padding-left: 85px;
       width: 330px;
 
       &:hover,
       &:focus {
         background: none;
       }
+
+      &:before {
+        width: 50px;
+        height: 50px;
+        left: 20px;
+      }
     }
   }
 
   @include xl {
     a {
-      width: 365px;
+      width: 450px;
+      padding-left: 100px;
+
+      &:before {
+        width: 60px;
+        height: 60px;
+      }
     }
   }
 
   @include xxl {
     a {
-      padding: $g-spacer-sm $g-spacer;
+      padding: $g-spacer-sm $g-spacer $g-spacer-sm 120px;
+      width: 530px;
+
+      &:before {
+        width: 75px;
+        height: 75px;
+      }
     }
   }
 }

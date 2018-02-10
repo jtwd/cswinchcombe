@@ -1,0 +1,14 @@
+.Card {
+  // padding: $g-spacer-lg $g-spacer-lg;
+  margin-bottom: $g-spacer-xl;
+  // background: rgba($c-dark, 0.15);
+  // box-shadow: inset 0px 3px 7px 2px rgba(0,0,0,0.15), 0px 3px 8px 2px rgba(0,0,0,0.15);
+
+  @include md {
+    margin-bottom: $g-spacer-lg;
+  }
+
+  @include lg {
+    margin-bottom: $g-spacer-xl;
+  }
+}

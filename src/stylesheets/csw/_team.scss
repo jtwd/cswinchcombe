@@ -1,3 +1,93 @@
 .team {
   background: #EBEBD3;
 }
+
+.Team-list {
+  list-style: none;
+  margin: $g-spacer-lg 0 0;
+
+  &__item {
+    padding-bottom: $g-spacer-lg;
+    margin-bottom: $g-spacer-lg;
+    border-bottom: 2px solid rgba($c-dark, .15);
+
+    h3 {
+      color: $c-primary;
+    }
+
+    &:last-child {
+      border: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__image {
+    position: relative;
+    padding-bottom: 70%;
+    overflow: hidden;
+    border: 3px solid rgba($c-dark, 0);
+    background: rgba($c-dark, .15);
+
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      background: transparent;
+    }
+  }
+
+  &__copy {
+    padding-top: $g-spacer-lg;
+  }
+
+  @include sm {
+    &__item {
+      display: flex;
+      align-items: center;
+      background: rgba($c-dark, .05);
+      border: 0;
+      padding-bottom: 0;
+    }
+
+    &__image,
+    &__copy {
+      flex: 1 1 auto;
+      width: 50%;
+    }
+
+    &__image {
+      padding-bottom: 40%;
+      margin-right: $g-spacer;
+    }
+
+    &__copy {
+      padding: 0 $g-spacer-sm 0 0;
+    }
+
+    &__item:nth-child(even) {
+      flex-direction: row-reverse;
+      background: rgba($c-dark, 0);
+
+      .Team-list__image {
+        margin-right: 0;
+      }
+
+      .Team-list__copy {
+        padding: 0 $g-spacer 0 0;
+      }
+    }
+  }
+
+  @include md {
+    &__image {
+      padding-bottom: 30%;
+    }
+  }
+
+  @include lg {
+    
+  }
+}

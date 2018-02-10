@@ -4,7 +4,7 @@
 
 .Hero__image {
   height: 180px;
-  background-image: url('/images/hero1_sml.jpg');
+  background-image: url('../images/hero1_sml.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -15,7 +15,7 @@
 
   @include xs {
     height: 280px;
-    background-image: url('/images/hero1_med.jpg');
+    background-image: url('../images/hero1_med.jpg');
   }
 
   @include sm {
@@ -24,7 +24,7 @@
 
   @include md {
     height: 350px;
-    background-image: url('/images/hero1_lrg.jpg');
+    background-image: url('../images/hero1_lrg.jpg');
   }
 }
 

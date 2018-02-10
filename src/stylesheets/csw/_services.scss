@@ -6,13 +6,6 @@
   list-style: none;
   margin: $g-spacer-lg 0 0;
 
-  &__item {
-    padding: $g-spacer-lg $g-spacer-lg;
-    margin-bottom: $g-spacer;
-    background: rgba($c-dark, 0.05);
-    box-shadow: inset 0px 3px 7px 2px rgba(0,0,0,0.15), 0px 3px 8px 2px rgba(0,0,0,0.15);
-  }
-
   h3 {
     color: $c-primary;
   }
@@ -33,26 +26,21 @@
     }
   }
 
-  @include md {
+  @include sm {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-column-gap: $g-spacer;
-    margin-right: $g-spacer;
+    grid-column-gap: $g-spacer-lg;
+    margin-right: $g-spacer-lg;
   }
 
   @include lg {
+    grid-column-gap: $g-spacer-xl;
+    margin-right: $g-spacer-xl;
+
     &__image {
       padding-bottom: 50%;
     }
   }
 
-  @include xl {
-    grid-column-gap: $g-spacer-lg;
-    margin-right: $g-spacer-lg;
-
-    &__item {
-      margin-bottom: $g-spacer-lg;
-    }
-  }
 }
 
