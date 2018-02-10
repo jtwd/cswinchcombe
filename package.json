@@ -1,7 +1,7 @@
 {
-  "name": "atomic",
-  "version": "1.2.3",
-  "description": "Front end starter kit for Jaywing (Newbury), bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed up development time.",
+  "name": "cswinchcombe",
+  "version": "0.0.1",
+  "description": "Website for C.S. Winchcombe & Son Funeral Directors",
   "scripts": {
     "start": "yarn run blendid",
     "build": "yarn run blendid build"
