@@ -1,0 +1,16 @@
+.Site-header {
+  background: navy;
+
+  > .o-Container {
+    position: relative;
+  }
+
+  @include mq($from: $fixed-header-bp) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, .5);
+    z-index: 10;
+  }
+}

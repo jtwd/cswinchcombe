@@ -1,0 +1,169 @@
+// ----------------------------------------------------------------------
+
+// Generic: Base
+
+// ----------------------------------------------------------------------
+
+////
+/// @author   Jaywing
+/// @group    jw
+/// @created  08/06/2016
+////
+
+// Base styles for HTML and BODY elements
+$base-bg-color: $c-light !default;
+$base-text-color: $c-dark-15 !default;
+$base-font-family: $g-font-sans !default;
+$base-font-weight: $g-weight-normal !default;
+// Highlighted Text colors
+$base-highlight-bg: $c-primary-pale !default;
+$base-highlight-color: $base-text-color !default;
+$base-input-highlight-bg: $c-very-strong-trans-dark !default;
+$base-input-highlight-color: $base-text-color !default;
+$body-antialiased: $g-body-antialiased !default;
+$body-no-horizontal-scroll: $g-body-no-horizontal-scroll !default;
+
+$fixed-header-bp: 336px;
+$fixed-header-size-xxs: 89px;
+$fixed-header-size-xs: 97px;
+$fixed-header-size-md: 98px;
+$fixed-header-size-xl: 110px;
+$fixed-header-size-xxl: 104px;
+
+// Border-box for everything!
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: $base-bg-color;
+  color: $base-text-color;
+  font-family: $base-font-family;
+  font-size: 14px;
+  font-weight: 300;
+
+  &.fonts-loaded {
+    font-family: $base-font-family;
+  }
+
+  @include xxs {
+    font-size: 15px;
+  }
+
+  @include xs {
+    font-size: 16px;
+  }
+
+  @include xl {
+    font-size: 18px;
+  }
+
+  @include xxl {
+    font-size: 20px;
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  line-height: 1.4;
+  min-height: 100%;
+
+  // optimise font rendering - set this in settings.global.scss
+  @if $body-antialiased {
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  @if $body-no-horizontal-scroll {
+    // disable horizontal scroll
+    overflow-x: hidden;
+  }
+
+  &:target {
+    animation: none;
+  }
+
+  @include mq($from: $fixed-header-bp) {
+    padding-top: $fixed-header-size-xxs;
+  }
+
+  @include xs {
+    padding-top: $fixed-header-size-xs;
+  }
+
+  @include md {
+    padding-top: $fixed-header-size-md;
+  }
+
+  @include xl {
+    padding-top: $fixed-header-size-xl;
+  }
+
+  @include xxl {
+    padding-top: $fixed-header-size-xxl;
+  }
+}
+
+// sass-lint:disable no-important
+[hidden] {
+  display: none !important;
+}
+// scss-lint:enable ImportantRule
+
+// Highlighted text colors
+::selection {
+  background-color: $base-highlight-bg;
+  color: $base-highlight-color;
+}
+
+input::selection,
+textarea::selection {
+  background: $base-input-highlight-bg;
+  color: $base-input-highlight-color;
+}
+
+.scroll-wrapper {
+  scroll-behavior: smooth;
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+.page-section {
+  outline: 0;
+  padding: $g-spacer-lg 0;
+
+  @include lg {
+    padding: $g-spacer-xl 0;
+  }
+
+  @include xl {
+    padding: $g-spacer-xxl 0;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+
+    @include sm {
+      font-size: 1.6rem;
+    }
+
+    @include lg {
+      font-size: 1.8rem;
+    }
+  }
+
+  .copy-wrapper {
+    max-width: 38rem;
+  }
+}

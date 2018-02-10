@@ -1,0 +1,72 @@
+.Site-name {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-size: 1.1rem;
+  color: $c-light;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba($c-dark, .9);
+  line-height: 1.2;
+  box-shadow: inset 0 -5px 5px 0 rgba($c-dark, .2), 
+              inset 0 5px 5px 0 rgba($c-dark, .2);
+
+  a {
+    text-decoration: none;
+    display: block;
+    padding: $g-spacer-sm $g-spacer;
+    color: #fffdda;
+    transition: $hover-trans;
+
+    &:hover,
+    &:focus {
+      color: $c-light;
+      text-shadow: 2px 2px 4px rgba(#000, .9);
+      background: rgba($c-dark, .2);
+    }
+  }
+
+  span {
+    white-space: nowrap;
+  }
+
+  @include mq($from: 260px) {
+    font-size: 1.3rem;
+  }
+
+  @include mq($from: $fixed-header-bp) {
+    text-align: center;
+
+    a {
+      padding: 1rem 0;
+    }
+  }
+
+  @include xs {
+    font-size: 1.5rem;
+  }
+
+  @include md {
+    font-size: 1.75rem;
+    text-align: left;
+
+    a {
+      padding-left: $g-spacer;
+      width: 330px;
+
+      &:hover,
+      &:focus {
+        background: none;
+      }
+    }
+  }
+
+  @include xl {
+    a {
+      width: 365px;
+    }
+  }
+
+  @include xxl {
+    a {
+      padding: $g-spacer-sm $g-spacer;
+    }
+  }
+}

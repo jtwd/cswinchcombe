@@ -1,0 +1,19 @@
+{% set pageId = 'index' %}
+
+{% extends 'layouts/application.njk' %}
+
+{% block metaTitle %}{{ metaTitle }}{% endblock %}
+{% block metaTags %}
+  <meta name="description" content="{{ metaDescription }}" />
+{% endblock %}
+
+{% block content %}
+  {% include 'shared/hero.njk' %}
+  {% include 'shared/services.njk' %}
+  {% include 'shared/team.njk' %}
+  {% include 'shared/history.njk' %}
+  {% include 'shared/contact.njk' %}
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

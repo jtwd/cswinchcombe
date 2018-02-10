@@ -1,0 +1,58 @@
+.services {
+  background: #f2f2f2;
+}
+
+.Service-list {
+  list-style: none;
+  margin: $g-spacer-lg 0 0;
+
+  &__item {
+    padding: $g-spacer-lg $g-spacer-lg;
+    margin-bottom: $g-spacer;
+    background: rgba($c-dark, 0.05);
+    box-shadow: inset 0px 3px 7px 2px rgba(0,0,0,0.15), 0px 3px 8px 2px rgba(0,0,0,0.15);
+  }
+
+  h3 {
+    color: $c-primary;
+  }
+
+  &__image {
+    position: relative;
+    padding-bottom: 48%;
+    overflow: hidden;
+    border: 3px solid rgba($c-dark, 0);
+    background: rgba($c-dark, .15);
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+    }
+  }
+
+  @include md {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: $g-spacer;
+    margin-right: $g-spacer;
+  }
+
+  @include lg {
+    &__image {
+      padding-bottom: 50%;
+    }
+  }
+
+  @include xl {
+    grid-column-gap: $g-spacer-lg;
+    margin-right: $g-spacer-lg;
+
+    &__item {
+      margin-bottom: $g-spacer-lg;
+    }
+  }
+}
+

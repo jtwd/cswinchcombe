@@ -1,0 +1,8 @@
+{% from 'macros/menu.njk' import menuLink %}
+<nav class="Main-nav">
+  <ul>
+    {% for page in pages %}
+      {{ menuLink(page.id, page.title, page.url, pageId, '') }}
+    {% endfor %}
+  </ul>
+</nav>

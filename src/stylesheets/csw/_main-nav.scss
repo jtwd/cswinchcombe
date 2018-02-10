@@ -1,0 +1,84 @@
+.Main-nav {
+  background: #eee;
+  border: 1px solid #ddd;
+
+  ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    width: 50%;
+    padding: 0;
+    text-align: left;
+    border: 1px solid #ddd;
+
+    @include mq($from: $fixed-header-bp) {
+      width: 25%;
+      text-align: center;
+      border: 0;
+    }
+  }
+
+  a {
+    transition: $hover-trans;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: $g-spacer-sm $g-spacer;
+    text-decoration: none;
+    color: navy;
+    font-weight: 500;
+
+    &:hover,
+    &:focus,
+    &.active {
+      background: #ddd;
+    }
+  }
+
+  @include md {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    bottom: 0;
+    background: none;
+    border: 0;
+
+    .Menu-item {
+      padding: 0 $g-spacer-xs;
+    }
+
+    a {
+      color: #fffdda;
+      padding: $g-spacer-sm $g-spacer-sm $g-spacer;
+      border-radius: $g-spacer-xs $g-spacer-xs 0 0;
+      border: 1px solid transparent;
+      border-bottom: 0;
+
+      &:hover,
+      &:focus,
+      &.active {
+        background: #eee;
+        box-shadow: inset 0px 3px 5px 2px rgba($c-dark, .25);
+        border-color: #fffdda;
+        color: $c-primary;
+      }
+    }
+  }
+
+  @include lg {
+    .Menu-item {
+      padding: 0 $g-spacer-sm;
+    }
+  }
+
+  @include xxl {
+    a {
+      padding-bottom: $g-spacer-sm;
+    }
+  }
+}
+
