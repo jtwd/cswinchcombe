@@ -36,9 +36,11 @@
     {% block content %}{% endblock %}
   </main>
 
-  <footer role="contentinfo" class="o-Site-footer">
+  <footer role="contentinfo" class="Site-footer">
+    {% block footer %}{% endblock %}
     <div class="o-Container o-Container--centered">
-      <p>&copy; <u id="copyright-year">{{ author.createdYear }}</u> - {{ author.footerText }} <a href="{{ author.url }}">{{ author.name }}</a></p>
+      <p class="credit">Made with <span>♥</span> at <a href="{{ author.url }}" title="James Taylor Web Designs">{{ author.name }}</a></p>
+      <p class="copyright">&copy; <u id="copyright-year">{{ author.createdYear }}</u> {{ site_name }} <nobr>- all rights reserved</nobr></p>
     </div>
   </footer>
 
