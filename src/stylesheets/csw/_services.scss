@@ -3,9 +3,6 @@
 }
 
 .Service-list {
-  list-style: none;
-  margin: $g-spacer-lg 0 0;
-
   h3 {
     color: $c-primary;
   }
@@ -26,17 +23,7 @@
     }
   }
 
-  @include sm {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: $g-spacer-lg;
-    margin-right: $g-spacer-lg;
-  }
-
   @include lg {
-    grid-column-gap: $g-spacer-xl;
-    margin-right: $g-spacer-xl;
-
     &__image {
       padding-bottom: 50%;
     }

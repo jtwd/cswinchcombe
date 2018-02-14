@@ -1,6 +1,48 @@
+{% from 'macros/icon.njk' import icon %}
+
 <section id="contact" class="page-section contact">
-  <div class="o-Container o-Container--centered" style="height: 900px;">
-    <h2>Contact</h2>
-    <a href="#">link</a>
+  <div class="o-Container o-Container--centered">
+    <h2>Contact us</h2>
+
+    <ul class="Contact-list list-2-col list-2-col--md">
+      <li class="Contact-list__item Card">
+        <div class="Contact-list__image" data-module="LoadImage" data-options='{"url": "/images/winchcombe-shop_lrg.jpg", "alt": "Winchcombe House, Devizes", "bp":"300"}'>
+          <img src="/images/s.gif" class="c-tile__poster LoadImage" />
+          <noscript><img src="/images/winchcombe-shop_lrg.jpg" alt="Winchcombe House, Devizes" /></noscript>
+        </div>
+
+        <h3>Charles S. Winchcombe &amp; Son</h3>
+        <div class="address">
+          {{ icon('location', 'Icon--lg') }}
+          <p>
+            Winchcombe House,<br/>
+            37 New Park Street,<br />
+            Devizes,<br />
+            SN10 1DT
+          </p>
+        </div>
+        <a href="tel:01380722500" class="Button Button--xl"><span class="icon">&#9743;</span> 01380 722500 <span class="smaller">24 hrs</span></a>
+      </li>
+
+      <li class="Contact-list__item Card">
+        <div class="Contact-list__image" data-module="LoadImage" data-options='{"url": "/images/thomas-free_lrg.jpg", "alt": "Thomas Free & Sons, Marlborough", "bp":"300"}'>
+          <img src="/images/s.gif" class="c-tile__poster LoadImage" />
+          <noscript><img src="/images/thomas-free_lrg.jpg" alt="Thomas Free & Sons, Marlborough" /></noscript>
+        </div>
+
+        <h3>Thomas Free &amp; Sons</h3>
+        <div class="address">
+          {{ icon('location', 'Icon--lg') }}
+          <p>
+            Albert House,<br/>
+            The Parade,<br />
+            Marlborough,<br />
+            SN8 1NE
+          </p>
+        </div>
+        <a href="tel:01672512110" class="Button Button--xl"><span class="icon">&#9743;</span> 01672 512110 <span class="smaller">24 hrs</span></a>
+      </li>
+    </ul>
+    
   </div>
 </section>

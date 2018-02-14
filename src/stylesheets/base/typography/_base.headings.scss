@@ -43,6 +43,7 @@ h2 {
 
 h3 {
   @include great-primer;
+  color: $c-primary;
 }
 
 h4 {

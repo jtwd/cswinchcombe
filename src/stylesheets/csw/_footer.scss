@@ -68,6 +68,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-bottom: $g-spacer;
 
   a {
     display: inline-block;
@@ -125,22 +126,22 @@
 
   @include sm {
     .nafd {
-      width: 17%;
+      width: 15%;
       max-width: 126px;
     }
 
     .bifd {
-      width: 18%;
+      width: 16%;
       max-width: 133px;
     }
 
     .bramm,
     .perfect-choice {
-      width: 32.5%;
+      width: 30%;
       max-width: 320px;
 
       a {
-        max-width: 240px;
+        max-width: 200px;
       }
     }
   }
@@ -149,9 +150,10 @@
     .bramm,
     .perfect-choice {
       padding: 0;
+      width: 20%;
 
       a {
-        max-width: 280px;
+        max-width: 200px;
       }
     }
   }

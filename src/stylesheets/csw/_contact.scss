@@ -1,3 +1,41 @@
 .contact {
   background: #EBEBD3;
 }
+
+.Contact-list {
+  &__image {
+    position: relative;
+    padding-bottom: 42%;
+    overflow: hidden;
+    border: 3px solid rgba($c-dark, 0);
+    background: rgba($c-dark, .15);
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+    }
+  }
+}
+
+.address {
+  position: relative;
+  padding-left: 3rem;
+  padding-bottom: $g-spacer-lg;
+
+  .Icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    svg {
+      fill: $c-primary;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
