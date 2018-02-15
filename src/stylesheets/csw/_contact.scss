@@ -22,8 +22,12 @@
 
 .address {
   position: relative;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
   padding-bottom: $g-spacer-lg;
+
+  p {
+    margin: .5rem 0 0;
+  }
 
   .Icon {
     position: absolute;
@@ -34,8 +38,67 @@
       fill: $c-primary;
     }
   }
+}
 
-  p {
-    font-size: 1.1rem;
+.contacts {
+  padding-bottom: $g-spacer;
+
+  .icon {
+    text-align: left;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: $c-primary;
+    display: inline-block;
+    margin-right: $g-spacer-sm;
+    position: relative;
+    top: -3px;
+    left: -3px;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    display: inline-block;
+    margin-right: $g-spacer-sm;
+    text-decoration: none;
+    border-bottom: 2px dotted transparent;
+
+    &:hover,
+    &:focus {
+      border-bottom: 2px dotted rgba($c-primary, .5);
+    }
+  }
+}
+
+@include sm {
+  .contact-details {
+    display: flex;
+
+    > div  {
+      width: 50%;
+    }
+  }
+}
+
+@include md {
+  .contact-details {
+    display: block;
+
+    > div  {
+      width: 100%;
+    }
+  }
+}
+
+@include xl {
+  .contact-details {
+    display: flex;
+  
+    > div  {
+      width: 50%;
+    }
   }
 }
