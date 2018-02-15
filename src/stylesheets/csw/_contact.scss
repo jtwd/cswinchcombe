@@ -18,6 +18,17 @@
       background: transparent;
     }
   }
+
+  &__item {
+    margin-bottom: $g-spacer-lg;
+    border-bottom: 2px solid rgba($c-dark, .15);
+
+    &:last-child {
+      border: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .address {
@@ -31,8 +42,8 @@
 
   .Icon {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -2px;
+    left: -5px;
 
     svg {
       fill: $c-primary;
@@ -89,6 +100,14 @@
 
     > div  {
       width: 100%;
+    }
+  }
+
+  .Contact-list {
+    &__item {
+      border: 0;
+      padding-bottom: 0;
+      margin-bottom: 0;
     }
   }
 }
